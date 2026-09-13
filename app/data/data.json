@@ -1,0 +1,238 @@
+{
+  "brand": {
+    "name": "Calle Heat",
+    "tagline": "Authentic street food, zero compromise.",
+    "established": 2024,
+    "city": "Los Angeles, CA",
+    "socials": {
+      "instagram": "@calleheat.tacos",
+      "twitter": "@calleheattacos",
+      "tiktok": "@calleheat"
+    }
+  },
+  "hours": [
+    {
+      "days": "Tue - Thu",
+      "time": "5:00 PM - 11:00 PM"
+    },
+    {
+      "days": "Fri - Sat",
+      "time": "5:00 PM - 2:00 AM"
+    },
+    {
+      "days": "Sunday",
+      "time": "4:00 PM - 10:00 PM"
+    },
+    {
+      "days": "Monday",
+      "time": "CLOSED / Private Catering"
+    }
+  ],
+  "schedule": [
+    {
+      "day": "Tuesday",
+      "location": "Arts District - 3rd & Traction",
+      "address": "800 E 3rd St, Los Angeles, CA",
+      "time": "5:00 PM - 11:00 PM",
+      "status": "Upcoming"
+    },
+    {
+      "day": "Wednesday",
+      "location": "Silver Lake Brewery Spot",
+      "address": "1601 Sunset Blvd, Los Angeles, CA",
+      "time": "5:00 PM - 11:00 PM",
+      "status": "Upcoming"
+    },
+    {
+      "day": "Thursday",
+      "location": "Highland Park Night Market",
+      "address": "5600 York Blvd, Los Angeles, CA",
+      "time": "5:00 PM - 11:00 PM",
+      "status": "Upcoming"
+    },
+    {
+      "day": "Friday",
+      "location": "Downtown Night Life Hub",
+      "address": "900 S Broadway, Los Angeles, CA",
+      "time": "5:00 PM - 2:00 AM",
+      "status": "Active Today",
+      "featured": true
+    },
+    {
+      "day": "Saturday",
+      "location": "Echo Park After Hours",
+      "address": "1800 Sunset Blvd, Los Angeles, CA",
+      "time": "5:00 PM - 2:00 AM",
+      "status": "Upcoming"
+    },
+    {
+      "day": "Sunday",
+      "location": "Venice Beach Boardwalk Drop",
+      "address": "Ocean Front Walk & Rose Ave, Venice, CA",
+      "time": "4:00 PM - 10:00 PM",
+      "status": "Upcoming"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tacos",
+      "name": "Street Tacos"
+    },
+    {
+      "id": "specialties",
+      "name": "Calle Specialties"
+    },
+    {
+      "id": "sides",
+      "name": "Sides & Munchies"
+    },
+    {
+      "id": "drinks",
+      "name": "Ice Cold Drinks"
+    }
+  ],
+  "menu": [
+    {
+      "id": "taco-01",
+      "name": "Fire-Grilled Carne Asada",
+      "category": "tacos",
+      "price": 4.5,
+      "description": "Citrus-marinated skirt steak seared over high flame, topped with diced white onion, cilantro, and charred salsa verde on handmade corn tortillas.",
+      "spiceLevel": 2,
+      "popular": true,
+      "badge": "Bestseller",
+      "image": "/images/carne-asada.jpg",
+      "tags": [
+        "Gluten-Free",
+        "Halal Option"
+      ]
+    },
+    {
+      "id": "taco-02",
+      "name": "Al Pastor Crisp",
+      "category": "tacos",
+      "price": 4.25,
+      "description": "Slow-roasted guajillo pork carved off the trompo, charred pineapple chunk, onion, cilantro, and fiery red habanero drop.",
+      "spiceLevel": 3,
+      "popular": true,
+      "badge": "Local Favorite",
+      "image": "/images/al-pastor.jpg",
+      "tags": [
+        "Gluten-Free"
+      ]
+    },
+    {
+      "id": "taco-03",
+      "name": "Birria Quesataco",
+      "category": "tacos",
+      "price": 5.25,
+      "description": "Slow-braised beef birria melted with Oaxaca cheese in a crisp chili-dipped tortilla. Served with a cup of rich consomm\u00e9 broth for dipping.",
+      "spiceLevel": 2,
+      "popular": true,
+      "badge": "Must Try",
+      "image": "/images/birria-quesataco.jpg",
+      "tags": [
+        "Chef's Pick"
+      ]
+    },
+    {
+      "id": "taco-04",
+      "name": "Smoked Mushroom & Masa",
+      "category": "tacos",
+      "price": 4.0,
+      "description": "Mesquite-smoked wild mushrooms, roasted poblano strips, avocado crema, and toasted pumpkin seeds.",
+      "spiceLevel": 1,
+      "popular": false,
+      "badge": "Vegan",
+      "image": "/images/smoked-mushroom.jpg",
+      "tags": [
+        "Vegan",
+        "Gluten-Free"
+      ]
+    },
+    {
+      "id": "spec-01",
+      "name": "Calle Loaded Mulita",
+      "category": "specialties",
+      "price": 8.5,
+      "description": "Two crispy corn tortillas stacked with melted Oaxaca cheese, choice of protein, pickled red onions, avocado crema, and salsa macha.",
+      "spiceLevel": 2,
+      "popular": true,
+      "badge": "Heavy Hit",
+      "image": "/images/mulita.jpg",
+      "tags": [
+        "Signature"
+      ]
+    },
+    {
+      "id": "spec-02",
+      "name": "Vapor Ghost Burrito",
+      "category": "specialties",
+      "price": 12.0,
+      "description": "Carne asada, crisp fries, melted cheese, habanero crema, guacamole, and salsa rojo wrapped in a grilled flour tortilla.",
+      "spiceLevel": 4,
+      "popular": false,
+      "badge": "Spicy",
+      "image": "/images/ghost-burrito.jpg",
+      "tags": [
+        "Spicy"
+      ]
+    },
+    {
+      "id": "side-01",
+      "name": "Street Corn Elote",
+      "category": "sides",
+      "price": 5.0,
+      "description": "Charred corn on the cob slathered in chipotle mayo, cotija cheese, Taj\u00edn dusting, and fresh lime squeeze.",
+      "spiceLevel": 1,
+      "popular": true,
+      "badge": "Popular",
+      "image": "/images/elote.jpg",
+      "tags": [
+        "Vegetarian"
+      ]
+    },
+    {
+      "id": "side-02",
+      "name": "Ghost Pepper Queso & Chips",
+      "category": "sides",
+      "price": 6.5,
+      "description": "House-made tortilla chips with warm melted cheese infused with roasted jalape\u00f1os and a kick of ghost pepper.",
+      "spiceLevel": 3,
+      "popular": false,
+      "badge": "",
+      "image": "/images/queso-chips.jpg",
+      "tags": [
+        "Vegetarian"
+      ]
+    },
+    {
+      "id": "drink-01",
+      "name": "Electric Lime Horchata",
+      "category": "drinks",
+      "price": 4.5,
+      "description": "Traditional sweet rice milk infused with cinnamon, vanilla, and a hint of zesty lime zest splash.",
+      "spiceLevel": 0,
+      "popular": true,
+      "badge": "Refreshing",
+      "image": "/images/horchata.jpg",
+      "tags": [
+        "House Made"
+      ]
+    },
+    {
+      "id": "drink-02",
+      "name": "Mexican Coca-Cola (Glass Bottle)",
+      "category": "drinks",
+      "price": 3.5,
+      "description": "Imported bottle made with real cane sugar.",
+      "spiceLevel": 0,
+      "popular": false,
+      "badge": "",
+      "image": "/images/mexican-coke.jpg",
+      "tags": [
+        "Imported"
+      ]
+    }
+  ]
+}

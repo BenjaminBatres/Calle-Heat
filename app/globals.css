@@ -10,6 +10,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-boordens: var(--font-boordens);
+  --font-jakarta-sans: var(--font-jakarta-sans);
+  --color-Warm-Cream:#FFF1D0;
+  --color-Asphalt-Black:#171717; 
+  --color-Salsa-Green:#3F7D4A; 
+  --color-Street-Corn-Yellow:#F6C344;
+  --color-chili-red: #E53920;
+  --color-card-charcoal: #1e1e1e;
+  --color-neon-lime: #76ff03;
+  --color-neon-pink: #ff1744;
+  --color-salsa-red: #e53935;
+  --color-masa-yellow: #ffc107;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +32,9 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta-sans);
+}
+
+h1, h2 {
+  font-family: var(--font-boordens);
 }
