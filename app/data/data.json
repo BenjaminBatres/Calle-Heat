@@ -101,7 +101,7 @@
       "spiceLevel": 2,
       "popular": true,
       "badge": "Bestseller",
-      "image": "/images/carne-asada.jpg",
+      "image": "/assets/images/carne-asada.jpg",
       "tags": [
         "Gluten-Free",
         "Halal Option"
@@ -116,7 +116,7 @@
       "spiceLevel": 3,
       "popular": true,
       "badge": "Local Favorite",
-      "image": "/images/al-pastor.jpg",
+      "image": "/assets/images/al-pastor-taco.jpg",
       "tags": [
         "Gluten-Free"
       ]
@@ -130,23 +130,23 @@
       "spiceLevel": 2,
       "popular": true,
       "badge": "Must Try",
-      "image": "/images/birria-quesataco.jpg",
+      "image": "/assets/images/birria-taco.jpg",
       "tags": [
         "Chef's Pick"
       ]
     },
     {
       "id": "taco-04",
-      "name": "Smoked Mushroom & Masa",
+      "name": "Baja Diablo Shrimp",
       "category": "tacos",
-      "price": 4.0,
-      "description": "Mesquite-smoked wild mushrooms, roasted poblano strips, avocado crema, and toasted pumpkin seeds.",
-      "spiceLevel": 1,
-      "popular": false,
-      "badge": "Vegan",
-      "image": "/images/smoked-mushroom.jpg",
+      "price": 5.50,
+      "description": "Wild-caught shrimp seared in chili-garlic butter, topped with crisp red cabbage slaw, fresh mango-habanero pico, and a drizzle of lime crema on handmade corn tortillas.",
+      "spiceLevel": 2,
+      "popular": true,
+      "badge": "Seafood Pick",
+      "image": "/assets/images/shrimp-taco.jpg",
       "tags": [
-        "Vegan",
+        "Seafood",
         "Gluten-Free"
       ]
     },
@@ -159,7 +159,7 @@
       "spiceLevel": 2,
       "popular": true,
       "badge": "Heavy Hit",
-      "image": "/images/mulita.jpg",
+      "image": "/assets/images/mulita.jpg",
       "tags": [
         "Signature"
       ]
@@ -173,7 +173,7 @@
       "spiceLevel": 4,
       "popular": false,
       "badge": "Spicy",
-      "image": "/images/ghost-burrito.jpg",
+      "image": "/assets/images/ghost-burrito.jpg",
       "tags": [
         "Spicy"
       ]
@@ -187,7 +187,7 @@
       "spiceLevel": 1,
       "popular": true,
       "badge": "Popular",
-      "image": "/images/elote.jpg",
+      "image": "/assets/images/elote.jpeg",
       "tags": [
         "Vegetarian"
       ]
@@ -201,21 +201,21 @@
       "spiceLevel": 3,
       "popular": false,
       "badge": "",
-      "image": "/images/queso-chips.jpg",
+      "image": "/assets/images/chips-salsa-queso.jpg",
       "tags": [
         "Vegetarian"
       ]
     },
     {
       "id": "drink-01",
-      "name": "Electric Lime Horchata",
+      "name": "Horchata",
       "category": "drinks",
       "price": 4.5,
       "description": "Traditional sweet rice milk infused with cinnamon, vanilla, and a hint of zesty lime zest splash.",
       "spiceLevel": 0,
       "popular": true,
       "badge": "Refreshing",
-      "image": "/images/horchata.jpg",
+      "image": "/assets/images/horchata.jpg",
       "tags": [
         "House Made"
       ]
@@ -229,7 +229,7 @@
       "spiceLevel": 0,
       "popular": false,
       "badge": "",
-      "image": "/images/mexican-coke.jpg",
+      "image": "/assets/images/mexican-coke.jpg",
       "tags": [
         "Imported"
       ]

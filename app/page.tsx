@@ -1,4 +1,5 @@
 import HeroSection from "./components/sections/HeroSection";
+import MenuSection from "./components/sections/MenuSection";
 import ScheduleSection from "./components/sections/ScheduleSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
      <HeroSection /> 
      <ScheduleSection />
+      <MenuSection />
     </>
   );
 }
