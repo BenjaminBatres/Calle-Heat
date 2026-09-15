@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "motion/react";
+import { GiChiliPepper } from "react-icons/gi";
 
 interface TMenu {
   idx: number;
@@ -25,12 +26,12 @@ export default function MenuCard({
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{
-              delay: idx * 0.15,
-                duration: 0.25,
-              }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: idx * 0.15,
+        duration: 0.25,
+      }}
       className="space-y-4"
     >
       <figure className="border-6 border-Street-Corn-Yellow">
@@ -45,15 +46,25 @@ export default function MenuCard({
         />
       </figure>
       <div className="space-y-2.5">
-        <div className="flex items-center justify-between border-b border-Warm-Cream pb-2">
-          <h2 className="text-2xl tracking-widest text-Street-Corn-Yellow">
-            {name}
-          </h2>
+        <div className="flex justify-between border-b border-Warm-Cream pb-2">
           <div>
-            <p className="text-lg font-semibold text-Street-Corn-Yellow">
-              ${price.toFixed(2)}
-            </p>
+            <h2 className="text-2xl tracking-widest text-Street-Corn-Yellow">
+              {name}
+            </h2>
+            {spiceLevel !== 0 && (
+              <>
+                <p className="text-Street-Corn-Yellow font-bold flex items-center text-lg">
+                  Spice level:{" "}
+                  {new Array(spiceLevel).fill(0).map((_, id) => (
+                    <GiChiliPepper key={id} className="text-3xl" />
+                  ))}
+                </p>
+              </>
+            )}
           </div>
+          <p className="text-lg font-semibold text-Street-Corn-Yellow">
+            ${price.toFixed(2)}
+          </p>
         </div>
         <p className="text-Warm-Cream">{description}</p>
       </div>
