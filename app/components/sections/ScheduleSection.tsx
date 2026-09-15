@@ -16,7 +16,7 @@ export default function ScheduleSection() {
     },
   ];
   return (
-    <section className="py-20 lg:py-30 bg-Asphalt-Black px-5">
+    <section className="py-10 sm:py-20 lg:py-30 bg-Asphalt-Black px-5">
       <div className="max-w-400 mx-auto">
         <div className="grid lg:grid-cols-2 lg:gap-20">
           <div className="space-y-8">

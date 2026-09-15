@@ -5,7 +5,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import * as motion from "motion/react-client";
 export default function HeroSection() {
   return (
-    <section className="min-h-[95vh] bg-chili-red pt-32 sm:pt-40 lg:pt-55 pb-30 px-5">
+    <section className="min-h-[95vh] bg-chili-red pt-32 sm:pt-40 lg:pt-55 pb-10 sm:pb-30 px-5">
       <div className="max-w-400 mx-auto grid lg:grid-cols-2 gap-10">
         <div className="flex flex-col gap-8 items-center lg:items-start">
           <div className="space-y-5">

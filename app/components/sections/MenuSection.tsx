@@ -11,7 +11,7 @@ export default function MenuSection() {
       ? data.menu
       : data.menu.filter((item) => item.category === activeCategory);
   return (
-    <section className="py-20 px-5 bg-chili-red">
+    <section className="py-10 sm:py-20 px-5 bg-chili-red">
       <div className="max-w-400 mx-auto">
         <div className="flex flex-col items-center">
           <motion.h3
@@ -40,7 +40,7 @@ export default function MenuSection() {
               stiffness: 500,
               damping: 20,
             }}
-            className="text-[100px] leading-[100%] text-Warm-Cream mb-2"
+            className="text-7xl md:text-8xl lg:text-[100px] leading-[100%] text-Warm-Cream mb-2"
           >
             Calle Menu
           </motion.h2>
@@ -55,7 +55,7 @@ export default function MenuSection() {
               stiffness: 500,
               damping: 20,
             }}
-            className="text-Warm-Cream font-medium mb-8 text-lg"
+            className="text-Warm-Cream font-medium mb-8 text-lg text-center"
           >
             Fresh masa, fire-grilled meats, and ret-hot salsas.
           </motion.p>
@@ -81,7 +81,7 @@ export default function MenuSection() {
           >
             All Items
           </button>
-          {data.categories.map((cat, idx) => (
+          {data.categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
