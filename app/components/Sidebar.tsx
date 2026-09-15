@@ -38,7 +38,12 @@ export default function Sidebar({ links }: TProps) {
         </div>
         <ul className="flex flex-col gap-7 px-5 py-5">
           {links.map((link, id) => (
-            <Links key={id} name={link.name} path={link.path} />
+            <Links
+              key={id}
+              name={link.name}
+              path={link.path}
+              setIsOpen={() => setIsOpen(false)}
+            />
           ))}
           <Link
             href={"/contact"}
