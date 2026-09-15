@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 export default function Navbar() {
   const links = [
     {
-      path: "/",
+      path: "#",
       name: "Home",
     },
     {

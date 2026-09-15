@@ -28,6 +28,9 @@
       "time": "CLOSED / Private Catering"
     }
   ],
+  "gallery": [
+    "/assets/gallery/asada.jpg", "/assets/gallery/birria-taco.jpg", "/assets/gallery/tacos.jpg", "/assets/gallery/tacos-2.jpg", "/assets/gallery/tacos-3.jpg", "/assets/gallery/elote.jpg", "/assets/gallery/food-truck.jpg", "/assets/gallery/pastor.jpg", "/assets/gallery/person-taco.jpg", "/assets/gallery/shrimp-taco.jpg", "/assets/gallery/salsa-taco.jpg", "/assets/gallery/chips-salsa.jpg"
+  ],
   "schedule": [
     {
       "day": "Tuesday",
