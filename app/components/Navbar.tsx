@@ -9,6 +9,10 @@ export default function Navbar() {
       name: "Home",
     },
     {
+      path: "#schedule",
+      name: "Schedule",
+    },
+    {
       path: "#menu",
       name: "Menu",
     },

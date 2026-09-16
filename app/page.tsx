@@ -1,4 +1,5 @@
 import AboutSection from "./components/sections/AboutSection";
+import Footer from "./components/sections/Footer";
 import GallerySection from "./components/sections/GallerySection";
 import HeroSection from "./components/sections/HeroSection";
 import MenuSection from "./components/sections/MenuSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <MenuSection />
       <AboutSection />
       <GallerySection />
+      <Footer />
     </>
   );
 }
