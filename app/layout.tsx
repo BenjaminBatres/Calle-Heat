@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/sections/Footer";
 
 const boordensStreet = localFont({
   src: "./fonts/BoordensStreet.otf",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

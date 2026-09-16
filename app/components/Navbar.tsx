@@ -26,7 +26,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="fixed w-full top-5 px-2.5">
+    <header className="fixed w-full top-4 sm:top-5 px-2.5">
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

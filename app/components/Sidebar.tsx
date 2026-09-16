@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiMenuLine } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
@@ -16,6 +16,23 @@ interface TProps {
 
 export default function Sidebar({ links }: TProps) {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 1024) {
+        setIsOpen(false);
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isOpen]);
   return (
     <div className="lg:hidden">
       <RiMenuLine
