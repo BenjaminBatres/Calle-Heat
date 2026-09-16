@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
-import * as motion from "motion/react-client";
+import { useMotionValueEvent, useScroll, motion } from "motion/react";
+import { useState } from "react";
 
 export default function Navbar() {
   const links = [
@@ -25,8 +27,27 @@ export default function Navbar() {
       name: "Gallery",
     },
   ];
+
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (current > previous && current > 300) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   return (
-    <header className="fixed w-full top-4 sm:top-5 px-2.5">
+    <motion.header
+      animate={{
+        y: hidden ? -140 : 0,
+        opacity: hidden ? 0 : 1,
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed w-full top-4 sm:top-5 px-2.5"
+    >
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,6 +79,6 @@ export default function Navbar() {
           <Sidebar links={links} />
         </ul>
       </motion.nav>
-    </header>
+    </motion.header>
   );
 }
