@@ -4,6 +4,7 @@ import { CiMail } from "react-icons/ci";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import * as motion from "motion/react-client";
+import Socials from "../ui/Socials";
 export default function ScheduleSection() {
   const contactDetails = [
     {
@@ -16,7 +17,10 @@ export default function ScheduleSection() {
     },
   ];
   return (
-    <section className="py-10 sm:py-20 lg:py-30 bg-Asphalt-Black px-5">
+    <section
+      id="schedule"
+      className="py-10 sm:py-20 lg:py-30 bg-Asphalt-Black px-5"
+    >
       <div className="max-w-400 mx-auto">
         <div className="grid lg:grid-cols-2 lg:gap-20">
           <div className="space-y-8">
@@ -128,20 +132,7 @@ export default function ScheduleSection() {
                     <div className="text-sm">{detail.info}</div>
                   </div>
                 ))}
-                <div className="flex items-center gap-2 text-Warm-Cream">
-                  <FaInstagram className="text-2xl" />
-                  <span className="text-sm">
-                    {data.brand.socials.instagram}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-Warm-Cream">
-                  <FaTiktok className="text-2xl" />
-                  <span className="text-sm">{data.brand.socials.tiktok}</span>
-                </div>
-                <div className="flex items-center gap-2 text-Warm-Cream">
-                  <FaFacebookF className="text-2xl" />
-                  <span className="text-sm">{data.brand.socials.twitter}</span>
-                </div>
+                <Socials />
               </div>
             </motion.div>
           </div>
