@@ -8,7 +8,7 @@ export default function Footer() {
       title: "Quick Links",
       links: [
         {
-          path: "#",
+          path: "/",
           name: "Home",
         },
         {
