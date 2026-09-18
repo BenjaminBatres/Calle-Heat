@@ -1,6 +1,6 @@
-import Link from "next/link";
 import * as motion from "motion/react-client";
 import Socials from "../ui/Socials";
+import FooterDeatils from "../ui/FooterDeatils";
 
 export default function Footer() {
   const footerDetails = [
@@ -92,45 +92,12 @@ export default function Footer() {
           </div>
           <div className="lg:w-[35%] flex flex-col lg:flex-row lg:justify-between gap-6">
             {footerDetails.map((detail, id) => (
-              <div key={id} className="space-y-4 lg:space-y-6">
-                <motion.h3
-                  initial={{ opacity: 0, y: -100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{
-                    delay: 0.4,
-                    duration: 0.4,
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 20,
-                  }}
-                  className="text-3xl tracking-widest font-boordens"
-                >
-                  {detail.title}
-                </motion.h3>
-                <motion.div
-                  initial={{ opacity: 0, y: -100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{
-                    delay: 0.5,
-                    duration: 0.4,
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 20,
-                  }}
-                  className="flex flex-col sm:flex-row lg:flex-col gap-4 lg:gap-2"
-                >
-                  {detail.details?.map((detail, id) => (
-                    <p key={id}>{detail}</p>
-                  ))}
-                  {detail.links?.map((link, id) => (
-                    <Link href={link.path} key={id} className="lg:text-sm">
-                      {link.name}
-                    </Link>
-                  ))}
-                </motion.div>
-              </div>
+              <FooterDeatils
+                key={id}
+                title={detail.title}
+                details={detail.details}
+                links={detail.links}
+              />
             ))}
           </div>
         </div>
