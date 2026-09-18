@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { RiMenuLine } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
@@ -12,10 +11,12 @@ interface Links {
 
 interface TProps {
   links: Links[];
+  isOpen: boolean;
+  setIsOpen:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Sidebar({ links }: TProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Sidebar({ links, setIsOpen, isOpen }: TProps) {
+  // const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 1024) {
@@ -44,7 +45,7 @@ export default function Sidebar({ links }: TProps) {
         onClick={() => setIsOpen(false)}
       />
       <div
-        className={`fixed h-full w-[80%] sm:w-80 bg-card-charcoal text-Warm-Cream top-0 left-0 ${isOpen ? "translate-x-0" : "-translate-x-full"} duration-500`}
+        className={`fixed h-full w-80 bg-card-charcoal text-Warm-Cream top-0 left-0 ${isOpen ? "translate-x-0" : "-translate-x-full"} duration-500`}
       >
         <div className="pt-10.5 pb-7.5 px-5 flex items-center justify-between">
           <h2 className="text-4xl">Calle Heat</h2>
@@ -64,6 +65,7 @@ export default function Sidebar({ links }: TProps) {
           ))}
           <Link
             href={"/contact"}
+            onClick={() => setIsOpen(false)}
             className="text-lg font-semibold bg-chili-red px-8 py-4 rounded-[10px] text-Warm-Cream hover:bg-Street-Corn-Yellow duration-300 w-fit"
           >
             Contact Us
