@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const links = [
     {
-      path: "#home",
+      path: "#",
       name: "Home",
     },
     {
@@ -48,7 +48,7 @@ export default function Navbar() {
   const [targetSection, setTargetSection] = useState("");
 
   const router = useRouter();
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   useEffect(() => {
     if (targetSection) {
@@ -68,7 +68,7 @@ export default function Navbar() {
   };
 
   const handleLinkClick = (href: string, sectionId: string): void => {
-    if (pathname === "/") {
+    if (pathname === "") {
       scrollToSection(sectionId);
     } else {
       setTargetSection(sectionId);
@@ -100,10 +100,11 @@ export default function Navbar() {
           {links.map((link, id) => (
             <li key={id} className="hidden lg:block">
               <Link
-                href={"/"}
+                href={link.path}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleLinkClick("/", link.path);
+                  handleLinkClick(`/${link.path}`, link.name);
+                  scrollToSection(link.name);
                 }}
                 className="text-lg font-medium text-Warm-Cream"
               >

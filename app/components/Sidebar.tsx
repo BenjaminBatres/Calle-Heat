@@ -68,7 +68,7 @@ export default function Sidebar({
                 className="text-lg font-medium"
                 onClick={(e) => {
                   e.preventDefault()
-                  handleLinkCLick("/", link.path);
+                  handleLinkCLick(`/${link.path}`, link.name);
                   setIsOpen(false);
                 }}
               >
