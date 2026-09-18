@@ -12,10 +12,16 @@ interface Links {
 interface TProps {
   links: Links[];
   isOpen: boolean;
-  setIsOpen:  React.Dispatch<React.SetStateAction<boolean>>;
+  handleLinkCLick: (home: string, path: string) => void;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Sidebar({ links, setIsOpen, isOpen }: TProps) {
+export default function Sidebar({
+  links,
+  setIsOpen,
+  isOpen,
+  handleLinkCLick,
+}: TProps) {
   // const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     function handleResize() {
@@ -45,7 +51,7 @@ export default function Sidebar({ links, setIsOpen, isOpen }: TProps) {
         onClick={() => setIsOpen(false)}
       />
       <div
-        className={`fixed h-full w-80 bg-card-charcoal text-Warm-Cream top-0 left-0 ${isOpen ? "translate-x-0" : "-translate-x-full"} duration-500`}
+        className={`fixed h-full w-[80%] sm:w-80 bg-card-charcoal text-Warm-Cream top-0 left-0 ${isOpen ? "translate-x-0" : "-translate-x-full"} duration-500`}
       >
         <div className="pt-10.5 pb-7.5 px-5 flex items-center justify-between">
           <h2 className="text-4xl">Calle Heat</h2>
@@ -56,12 +62,18 @@ export default function Sidebar({ links, setIsOpen, isOpen }: TProps) {
         </div>
         <ul className="flex flex-col gap-7 px-5 py-5">
           {links.map((link, id) => (
-            <Links
-              key={id}
-              name={link.name}
-              path={link.path}
-              setIsOpen={() => setIsOpen(false)}
-            />
+            <li key={id}>
+              <Link
+                href={link.path}
+                className="text-lg font-medium"
+                onClick={(e) => {
+                  handleLinkCLick("/", link.path);
+                  setIsOpen(false);
+                }}
+              >
+                {link.name}
+              </Link>
+            </li>
           ))}
           <Link
             href={"/contact"}

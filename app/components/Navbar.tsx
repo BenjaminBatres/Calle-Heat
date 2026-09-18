@@ -48,33 +48,32 @@ export default function Navbar() {
   const [targetSection, setTargetSection] = useState("");
 
   const router = useRouter();
-  const pathname = usePathname();
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(`${sectionId}`);
-
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleLinkClick = (sectionId: string) => {
-    if (pathname === "/") {
-      // Already on homepage → just scroll
-      scrollToSection(sectionId);
-    } else {
-      // On another page → remember section, then go home
-      setTargetSection(sectionId);
-      router.push("/");
-    }
-  };
 
   useEffect(() => {
-    if (pathname === "/" && targetSection) {
+    if (targetSection) {
       scrollToSection(targetSection);
       setTargetSection("");
     }
-  }, [pathname, targetSection]);
+  }, [targetSection]);
+
+  const scrollToSection = (sectionId: string): void => {
+    const section = document.querySelector(`${sectionId}`);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleLinkClick = (href: string, sectionId: string): void => {
+    if (router.pathname === "/") {
+      scrollToSection(sectionId);
+    } else {
+      setTargetSection(sectionId);
+      router.push(href);
+    }
+  };
 
   return (
     <motion.header
@@ -103,7 +102,7 @@ export default function Navbar() {
                 href={"/"}
                 onClick={(e) => {
                   e.preventDefault();
-                  handleLinkClick(link.path);
+                  handleLinkClick("/", link.path);
                 }}
                 className="text-lg font-medium text-Warm-Cream"
               >
@@ -121,6 +120,7 @@ export default function Navbar() {
             links={links}
             isOpen={sidebarOpen}
             setIsOpen={setSidebarOpen}
+            handleLinkCLick={handleLinkClick}
           />
         </ul>
       </motion.nav>
