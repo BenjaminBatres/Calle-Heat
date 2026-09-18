@@ -48,6 +48,7 @@ export default function Navbar() {
   const [targetSection, setTargetSection] = useState("");
 
   const router = useRouter();
+  const pathname = usePathname()
 
   useEffect(() => {
     if (targetSection) {
@@ -67,7 +68,7 @@ export default function Navbar() {
   };
 
   const handleLinkClick = (href: string, sectionId: string): void => {
-    if (router.pathname === "/") {
+    if (pathname === "/") {
       scrollToSection(sectionId);
     } else {
       setTargetSection(sectionId);
